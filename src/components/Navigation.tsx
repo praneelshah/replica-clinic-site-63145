@@ -19,7 +19,7 @@ const Navigation = () => {
   const navItems = [
     { path: "/", label: "Home" },
     { path: "/services", label: "Dental Services" },
-    { path: "/orthodontics", label: "Braces/Orthodontics/Clear Aligners" },
+    { path: "/orthodontics", label: "Types of Braces" },
     { path: "/virtual-consultation", label: "Virtual Orthodontic Consultation" },
     { path: "/payment", label: "Payment Options" },
     { path: "/contact", label: "Contact Us" },
@@ -29,13 +29,13 @@ const Navigation = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-      scrolled ? 'bg-background/98 backdrop-blur-lg shadow-xl border-b border-border/50' : 'bg-background/40 backdrop-blur-md border-b border-white/10'
+      scrolled || location.pathname !== '/' ? 'bg-background/98 backdrop-blur-lg shadow-xl border-b border-border/50' : 'bg-background/40 backdrop-blur-md border-b border-white/10'
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center">
             <h1 className={`text-xl md:text-2xl font-serif font-bold tracking-wide transition-all duration-300 ${
-              scrolled ? 'text-foreground' : 'text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]'
+              scrolled || location.pathname !== '/' ? 'text-foreground' : 'text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]'
             }`}>
               IMAGINE DENTAL <span className="text-accent drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">&</span> ORTHODONTICS
             </h1>
@@ -48,7 +48,7 @@ const Navigation = () => {
                 key={item.path}
                 to={item.path}
                 className={`px-4 py-2 text-sm font-medium transition-all duration-300 ${
-                  scrolled
+                  scrolled || location.pathname !== '/'
                     ? isActive(item.path)
                       ? "text-primary font-semibold"
                       : "text-foreground/80 hover:text-primary"
@@ -67,7 +67,7 @@ const Navigation = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className={`lg:hidden p-2 transition-all duration-300 ${scrolled ? 'text-foreground' : 'text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]'} hover:scale-110`}
+            className={`lg:hidden p-2 transition-all duration-300 ${scrolled || location.pathname !== '/' ? 'text-foreground' : 'text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]'} hover:scale-110`}
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
