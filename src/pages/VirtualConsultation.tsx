@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { Checkbox } from "@/components/ui/checkbox";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Smartphone, Users, Utensils, Upload, CheckCircle } from "lucide-react";
@@ -17,6 +18,7 @@ const VirtualConsultation = () => {
     phone: "",
     message: "",
   });
+  const [agreedToTerms, setAgreedToTerms] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -71,9 +73,12 @@ const VirtualConsultation = () => {
         
         <AnimatedSection className="relative z-10 container mx-auto px-4 text-center text-white">
           <h1 className="text-5xl md:text-7xl font-serif font-light mb-6 tracking-wide">
-            Virtual Consultation
+            Precision Smile Orthodontics
           </h1>
           <div className="h-px w-24 bg-accent mx-auto my-6"></div>
+          <h2 className="text-3xl md:text-4xl font-serif font-light mb-4">
+            Virtual Consultation
+          </h2>
           <p className="text-xl md:text-2xl max-w-3xl mx-auto font-light opacity-90">
             Expert orthodontic advice from home—just bring a friend, smartphone & 2 spoons
           </p>
@@ -180,9 +185,31 @@ const VirtualConsultation = () => {
                   Please upload all 5 required photos (front, sides, upper, lower)
                 </p>
                 <Input type="file" multiple accept="image/*" className="max-w-xs mx-auto" />
+                
+                <div className="mt-6 text-left">
+                  <p className="text-sm text-muted-foreground mb-4">
+                    <strong>Terms and Conditions:</strong> By submitting photos and personal information, you consent to Precision Smile Orthodontics using this information to provide you with a virtual consultation. Your information will be kept confidential and used solely for evaluation purposes. This virtual consultation does not replace an in-person examination and is not a substitute for professional medical advice, diagnosis, or treatment.
+                  </p>
+                  <div className="flex items-start gap-3">
+                    <Checkbox 
+                      id="terms" 
+                      checked={agreedToTerms}
+                      onCheckedChange={(checked) => setAgreedToTerms(checked === true)}
+                      required
+                    />
+                    <Label htmlFor="terms" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 cursor-pointer">
+                      I agree to the terms and conditions *
+                    </Label>
+                  </div>
+                </div>
               </div>
 
-                <Button type="submit" size="lg" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
+                <Button 
+                  type="submit" 
+                  size="lg" 
+                  className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
+                  disabled={!agreedToTerms}
+                >
                   Submit Virtual Consultation Request
                 </Button>
               </form>

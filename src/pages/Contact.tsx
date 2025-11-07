@@ -42,13 +42,14 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      content: "imaginedentalkc@gmail.com",
-      link: "mailto:imaginedentalkc@gmail.com",
+      content: "info@precisionsmileortho.com",
+      link: "mailto:info@precisionsmileortho.com",
     },
   ];
 
   const hours = [
-    { day: "Monday - Friday", time: "8:00 AM - 6:00 PM" },
+    { day: "Monday - Thursday", time: "10:30 AM - 7:30 PM" },
+    { day: "Friday", time: "9:30 AM - 6:30 PM" },
     { day: "Saturday", time: "9:00 AM - 3:00 PM" },
     { day: "Sunday", time: "Closed" },
   ];
@@ -70,7 +71,7 @@ const Contact = () => {
           </h1>
           <div className="h-px w-24 bg-accent mx-auto my-6"></div>
           <p className="text-xl md:text-2xl max-w-3xl mx-auto font-light opacity-90">
-            We're here to answer your questions and schedule your appointment
+            Get in touch with Precision Smile Orthodontics - We're here to help you achieve your perfect smile
           </p>
         </AnimatedSection>
       </section>
@@ -203,7 +204,7 @@ const Contact = () => {
             <Card className="p-8 border-0 shadow-2xl bg-background text-center">
             <h2 className="text-3xl font-serif font-bold mb-4">Visit Our Office</h2>
             <p className="text-muted-foreground mb-6">
-              Conveniently located in Independence, MO with ample parking available
+              Conveniently located in Independence, MO. We welcome new patients and offer flexible appointment scheduling to accommodate your busy lifestyle.
             </p>
             <div className="aspect-video bg-muted rounded-lg overflow-hidden">
               <iframe
@@ -231,10 +232,10 @@ const Contact = () => {
           </div>
           <div className="container mx-auto px-4 text-center relative z-10">
             <h2 className="text-4xl font-serif font-light mb-6">
-            Ready to Schedule Your Appointment?
+            Ready to Start Your Smile Journey?
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto font-light opacity-90">
-            Same day and weekend appointments available. Call us now!
+            Precision Smile Orthodontics offers flexible scheduling with evening and weekend appointments available. Contact us today!
           </p>
           <Button size="lg" variant="outline" asChild className="bg-transparent backdrop-blur-sm border-white/30 text-white hover:bg-white hover:text-primary transition-all duration-300">
             <a href="tel:8168803900">Call (816) 880-3900</a>

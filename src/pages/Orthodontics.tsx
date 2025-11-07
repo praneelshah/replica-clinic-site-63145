@@ -19,7 +19,7 @@ const Orthodontics = () => {
     },
     {
       title: "Clear Aligners (Invisalign)",
-      price: "Starting at $149 per month",
+      price: "Starting at $199 per month",
       features: [
         "Nearly invisible appearance",
         "Removable for eating & cleaning",
@@ -30,7 +30,7 @@ const Orthodontics = () => {
     },
     {
       title: "Ceramic Braces",
-      price: "Starting at $129 per month",
+      price: "Starting at $199 per month",
       features: [
         "Tooth-colored brackets",
         "Less noticeable than metal",
