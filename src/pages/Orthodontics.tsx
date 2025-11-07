@@ -8,7 +8,7 @@ const Orthodontics = () => {
   const bracesOptions = [
     {
       title: "Traditional Metal Braces",
-      price: "As low as $99 per month",
+      price: "As low as $149 per month",
       features: [
         "Most cost-effective option",
         "Highly effective for complex cases",
@@ -45,7 +45,7 @@ const Orthodontics = () => {
     {
       icon: DollarSign,
       title: "Affordable Pricing",
-      description: "Flexible payment plans starting at just $99/month",
+      description: "Flexible payment plans starting at just $149/month",
     },
     {
       icon: Clock,
@@ -72,7 +72,7 @@ const Orthodontics = () => {
             BRACES
           </h1>
           <p className="text-3xl font-bold text-accent mb-4">
-            AS LOW AS $99 Per Month For Braces
+            AS LOW AS $149 Per Month For Braces
           </p>
           <Button size="lg" asChild>
             <a href="tel:8168803900">Call Now! (816) 880-3900</a>
