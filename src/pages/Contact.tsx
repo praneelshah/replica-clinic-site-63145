@@ -29,40 +29,74 @@ const Contact = () => {
 
   const offices = [
     {
-      name: "Whittier Office",
-      address: "15111 Whittier Blvd, Suite 101-A\nWhittier, CA, 90603",
-      phone: "(562) 399-5099",
-      phoneLink: "tel:+15623995099",
+      name: "Allentown, Bethlehem, PA Area",
+      address: "1247 South Cedar Crest Boulevard, Suite 300\nAllentown, PA 18103",
+      phone: "(610) 435-5599",
+      phoneLink: "tel:+16104355599",
       hours: [
         { day: "Monday - Thursday", time: "10:30 AM - 7:30 PM" },
         { day: "Friday", time: "9:30 AM - 6:30 PM" },
         { day: "Saturday", time: "9:00 AM - 3:00 PM" },
         { day: "Sunday", time: "Closed" },
       ],
-      mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.5543567890!2d-118.0327!3d33.9761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDU4JzM0LjAiTiAxMTjCsDAxJzU3LjciVw!5e0!3m2!1sen!2sus!4v1234567890",
+      mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3033.5421!2d-75.5377!3d40.5732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c43e6c0a0a0a0a%3A0x0!2z1247+South+Cedar+Crest+Boulevard,+Allentown,+PA+18103!5e0!3m2!1sen!2sus!4v1234567890",
     },
     {
-      name: "Eagle Rock Office",
-      address: "1447 Colorado Blvd\nLos Angeles, CA 90041",
-      phone: "(323) 255-1708",
-      phoneLink: "tel:+13232551708",
+      name: "Quakertown Area",
+      address: "28 South 14th Street\nQuakertown, PA 18951",
+      phone: "(215) 538-4550",
+      phoneLink: "tel:+12155384550",
       hours: [
         { day: "Monday - Thursday", time: "10:30 AM - 7:30 PM" },
         { day: "Friday", time: "9:30 AM - 6:30 PM" },
         { day: "Saturday - Sunday", time: "Closed" },
       ],
-      mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3303.234567890!2d-118.2088!3d34.1376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDA4JzE1LjQiTiAxMTjCsDEyJzMxLjciVw!5e0!3m2!1sen!2sus!4v1234567890",
+      mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3027.8421!2d-75.3415!3d40.4418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c42b7c0a0a0a0a%3A0x0!2z28+South+14th+Street,+Quakertown,+PA+18951!5e0!3m2!1sen!2sus!4v1234567890",
     },
     {
-      name: "Panorama City Office",
-      address: "14621 Nordhoff St, Suite 1A\nPanorama City, CA 91402",
-      phone: "(818) 891-1761",
-      phoneLink: "tel:+18188911761",
+      name: "Harleysville Area",
+      address: "456 School Lane\nHarleysville, PA 19438",
+      phone: "(215) 256-0808",
+      phoneLink: "tel:+12152560808",
       hours: [
         { day: "Monday - Friday", time: "10:00 AM - 7:00 PM" },
         { day: "Saturday - Sunday", time: "Closed" },
       ],
-      mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3298.123456789!2d-118.4447!3d34.2215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDEzJzE3LjQiTiAxMTjCsDI2JzQwLjkiVw!5e0!3m2!1sen!2sus!4v1234567890",
+      mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3043.2421!2d-75.3882!3d40.2845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6a0c0a0a0a0a0%3A0x0!2z456+School+Lane,+Harleysville,+PA+19438!5e0!3m2!1sen!2sus!4v1234567890",
+    },
+    {
+      name: "Lancaster Area",
+      address: "60 W Walnut St.\nLancaster, PA 17603",
+      phone: "(717) 735-8844",
+      phoneLink: "tel:+17177358844",
+      hours: [
+        { day: "Monday - Friday", time: "10:00 AM - 7:00 PM" },
+        { day: "Saturday - Sunday", time: "Closed" },
+      ],
+      mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3064.1421!2d-76.3055!3d40.0379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6333c0a0a0a0a%3A0x0!2z60+W+Walnut+St,+Lancaster,+PA+17603!5e0!3m2!1sen!2sus!4v1234567890",
+    },
+    {
+      name: "North-East Philadelphia Area",
+      address: "8355 Loretto Avenue\nPhiladelphia, PA 19152",
+      phone: "(215) 332-3600",
+      phoneLink: "tel:+12153323600",
+      hours: [
+        { day: "Monday - Friday", time: "10:00 AM - 7:00 PM" },
+        { day: "Saturday", time: "9:00 AM - 3:00 PM" },
+        { day: "Sunday", time: "Closed" },
+      ],
+      mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3048.5421!2d-75.0355!3d40.0652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6b0c0a0a0a0a0%3A0x0!2z8355+Loretto+Avenue,+Philadelphia,+PA+19152!5e0!3m2!1sen!2sus!4v1234567890",
+    },
+    {
+      name: "North Philadelphia Area",
+      address: "6100-02 N. 5th Street Storefront\nPhiladelphia, PA 19120",
+      phone: "(215) 455-5599",
+      phoneLink: "tel:+12154555599",
+      hours: [
+        { day: "Monday - Friday", time: "10:00 AM - 7:00 PM" },
+        { day: "Saturday - Sunday", time: "Closed" },
+      ],
+      mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3051.2421!2d-75.1380!3d40.0382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6c0c0a0a0a0a0%3A0x0!2z6100+N+5th+Street,+Philadelphia,+PA+19120!5e0!3m2!1sen!2sus!4v1234567890",
     },
   ];
 
@@ -83,7 +117,7 @@ const Contact = () => {
           </h1>
           <div className="h-px w-24 bg-accent mx-auto my-6"></div>
           <p className="text-xl md:text-2xl max-w-3xl mx-auto font-light opacity-90">
-            Three Convenient Locations To Serve You Best
+            Six Convenient Locations Across Pennsylvania
           </p>
         </AnimatedSection>
       </section>
@@ -96,7 +130,7 @@ const Contact = () => {
               <Card className="p-8 border-0 shadow-2xl bg-background">
                 <h2 className="text-3xl font-serif font-bold mb-2">General Inquiries</h2>
                 <p className="text-muted-foreground mb-6">
-                  To contact our Whittier Office, Eagle Rock Office, or Panorama City Office, fill out the form below or use the office information provided.
+                  Fill out the form below or use the office information provided for any of our six convenient locations.
                 </p>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
@@ -162,7 +196,7 @@ const Contact = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
             {offices.map((office, index) => (
               <AnimatedSection key={index} delay={index * 100}>
                 <Card className="p-6 border-0 shadow-2xl bg-background h-full flex flex-col">
@@ -258,15 +292,24 @@ const Contact = () => {
             <p className="text-xl mb-8 max-w-2xl mx-auto font-light opacity-90">
               We offer flexible scheduling with evening and weekend appointments available. Contact us today!
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center">
               <Button size="lg" variant="outline" asChild className="bg-transparent backdrop-blur-sm border-white/30 text-white hover:bg-white hover:text-primary transition-all duration-300">
-                <a href="tel:+15623995099">Whittier: (562) 399-5099</a>
+                <a href="tel:+16104355599">Allentown: (610) 435-5599</a>
               </Button>
               <Button size="lg" variant="outline" asChild className="bg-transparent backdrop-blur-sm border-white/30 text-white hover:bg-white hover:text-primary transition-all duration-300">
-                <a href="tel:+13232551708">Eagle Rock: (323) 255-1708</a>
+                <a href="tel:+12155384550">Quakertown: (215) 538-4550</a>
               </Button>
               <Button size="lg" variant="outline" asChild className="bg-transparent backdrop-blur-sm border-white/30 text-white hover:bg-white hover:text-primary transition-all duration-300">
-                <a href="tel:+18188911761">Panorama City: (818) 891-1761</a>
+                <a href="tel:+12152560808">Harleysville: (215) 256-0808</a>
+              </Button>
+              <Button size="lg" variant="outline" asChild className="bg-transparent backdrop-blur-sm border-white/30 text-white hover:bg-white hover:text-primary transition-all duration-300">
+                <a href="tel:+17177358844">Lancaster: (717) 735-8844</a>
+              </Button>
+              <Button size="lg" variant="outline" asChild className="bg-transparent backdrop-blur-sm border-white/30 text-white hover:bg-white hover:text-primary transition-all duration-300">
+                <a href="tel:+12153323600">NE Philly: (215) 332-3600</a>
+              </Button>
+              <Button size="lg" variant="outline" asChild className="bg-transparent backdrop-blur-sm border-white/30 text-white hover:bg-white hover:text-primary transition-all duration-300">
+                <a href="tel:+12154555599">N Philly: (215) 455-5599</a>
               </Button>
             </div>
           </div>

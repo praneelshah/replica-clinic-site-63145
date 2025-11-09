@@ -7,10 +7,17 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
-            <h3 className="text-2xl font-serif mb-4">Imagine Dental & Orthodontics</h3>
+            <h3 className="text-2xl font-serif mb-4">Precision Smile Orthodontics</h3>
             <p className="text-sm text-primary-foreground/80 mb-4">
               Your complete comprehensive cosmetic dental care destination. We offer a new encounter in patient care and comfort.
             </p>
+            <div className="flex items-start gap-2 text-sm">
+              <MapPin size={16} className="mt-1 flex-shrink-0" />
+              <div>
+                <p className="font-semibold mb-1">Main Office:</p>
+                <p className="text-primary-foreground/80">401 Commerce Drive, Suite 104 & 204<br />Fort Washington, PA 19034</p>
+              </div>
+            </div>
           </div>
 
           <div>
@@ -42,20 +49,16 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4 text-lg">Contact Information</h4>
             <ul className="space-y-3 text-sm">
-              <li className="flex items-start gap-2">
-                <MapPin size={16} className="mt-1 flex-shrink-0" />
-                <span>4600 S Nolan Rd, Ste C<br />Independence, MO 64055</span>
-              </li>
               <li className="flex items-center gap-2">
                 <Phone size={16} />
-                <a href="tel:8168803900" className="hover:text-accent transition-colors">
-                  (816) 880-3900
+                <a href="tel:+12159461000" className="hover:text-accent transition-colors">
+                  (215) 946-1000
                 </a>
               </li>
               <li className="flex items-center gap-2">
                 <Mail size={16} />
-                <a href="mailto:imaginedentalkc@gmail.com" className="hover:text-accent transition-colors">
-                  imaginedentalkc@gmail.com
+                <a href="mailto:info@precisionsmileortho.com" className="hover:text-accent transition-colors">
+                  info@precisionsmileortho.com
                 </a>
               </li>
             </ul>
@@ -66,7 +69,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-primary-foreground/20 mt-12 pt-8 text-center text-sm text-primary-foreground/60">
-          <p>&copy; {new Date().getFullYear()} Imagine Dental & Orthodontics. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Precision Smile Orthodontics. All rights reserved.</p>
         </div>
       </div>
     </footer>
