@@ -37,7 +37,7 @@ const Navigation = () => {
             <h1 className={`text-xl md:text-2xl font-serif font-bold tracking-wide transition-all duration-300 ${
               scrolled || location.pathname !== '/' ? 'text-foreground' : 'text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]'
             }`}>
-              IMAGINE DENTAL <span className="text-accent drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">&</span> ORTHODONTICS
+              PRECISION SMILE ORTHODONTICS
             </h1>
           </Link>
 
@@ -61,7 +61,7 @@ const Navigation = () => {
               </Link>
             ))}
             <Button variant="default" size="sm" className="ml-4 bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg">
-              <a href="tel:8168803900">Call (816) 880-3900</a>
+              <a href="tel:+12159461000">Call (215) 946-1000</a>
             </Button>
           </div>
 
@@ -95,7 +95,7 @@ const Navigation = () => {
             ))}
             <div className="px-4 pt-2 animate-in fade-in duration-500" style={{ animationDelay: '300ms' }}>
               <Button variant="default" size="sm" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground transition-all duration-300 hover:scale-105 hover:shadow-lg">
-                <a href="tel:8168803900">Call (816) 880-3900</a>
+                <a href="tel:+12159461000">Call (215) 946-1000</a>
               </Button>
             </div>
           </div>
