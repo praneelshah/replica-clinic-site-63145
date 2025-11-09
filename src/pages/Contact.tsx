@@ -196,75 +196,68 @@ const Contact = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
+          <div className="space-y-8 mb-16">
             {offices.map((office, index) => (
               <AnimatedSection key={index} delay={index * 100}>
-                <Card className="p-6 border-0 shadow-2xl bg-background h-full flex flex-col">
-                  <h3 className="text-2xl font-serif font-bold mb-4 text-center">{office.name}</h3>
+                <Card className="p-6 border-0 shadow-2xl bg-background">
+                  <h3 className="text-2xl font-serif font-bold mb-6 text-center">{office.name}</h3>
                   
-                  <div className="space-y-4 flex-grow">
-                    <div className="flex items-start gap-3">
-                      <MapPin className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
-                      <p className="text-muted-foreground whitespace-pre-line">{office.address}</p>
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    {/* Office Information */}
+                    <div className="space-y-4">
+                      <div className="flex items-start gap-3">
+                        <MapPin className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
+                        <p className="text-muted-foreground whitespace-pre-line">{office.address}</p>
+                      </div>
+
+                      <div className="flex items-center gap-3">
+                        <Phone className="w-5 h-5 text-accent flex-shrink-0" />
+                        <a
+                          href={office.phoneLink}
+                          className="text-muted-foreground hover:text-primary transition-colors font-medium"
+                        >
+                          {office.phone}
+                        </a>
+                      </div>
+
+                      <div className="pt-4 border-t">
+                        <div className="flex items-start gap-3 mb-3">
+                          <Clock className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
+                          <h4 className="font-bold">Office Hours</h4>
+                        </div>
+                        <div className="space-y-2 pl-8">
+                          {office.hours.map((schedule, idx) => (
+                            <div key={idx} className="flex justify-between items-center text-sm">
+                              <span className="font-medium">{schedule.day}</span>
+                              <span className="text-muted-foreground">{schedule.time}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+
+                      <Button className="w-full mt-6" asChild>
+                        <a href={office.phoneLink}>Call {office.name}</a>
+                      </Button>
                     </div>
 
-                    <div className="flex items-center gap-3">
-                      <Phone className="w-5 h-5 text-accent flex-shrink-0" />
-                      <a
-                        href={office.phoneLink}
-                        className="text-muted-foreground hover:text-primary transition-colors font-medium"
-                      >
-                        {office.phone}
-                      </a>
-                    </div>
-
-                    <div className="pt-4 border-t">
-                      <div className="flex items-start gap-3 mb-3">
-                        <Clock className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
-                        <h4 className="font-bold">Office Hours</h4>
-                      </div>
-                      <div className="space-y-2 pl-8">
-                        {office.hours.map((schedule, idx) => (
-                          <div key={idx} className="flex justify-between items-center text-sm">
-                            <span className="font-medium">{schedule.day}</span>
-                            <span className="text-muted-foreground">{schedule.time}</span>
-                          </div>
-                        ))}
-                      </div>
+                    {/* Map */}
+                    <div className="aspect-video lg:aspect-square bg-muted rounded-lg overflow-hidden">
+                      <iframe
+                        src={office.mapUrl}
+                        width="100%"
+                        height="100%"
+                        style={{ border: 0 }}
+                        allowFullScreen
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        title={`${office.name} Location`}
+                      />
                     </div>
                   </div>
-
-                  <Button className="w-full mt-6" asChild>
-                    <a href={office.phoneLink}>Call {office.name}</a>
-                  </Button>
                 </Card>
               </AnimatedSection>
             ))}
           </div>
-
-          {/* Maps Section */}
-          {offices.map((office, index) => (
-            <AnimatedSection key={index} delay={index * 100}>
-              <Card className="p-8 border-0 shadow-2xl bg-background mb-8">
-                <h3 className="text-2xl font-serif font-bold mb-4 text-center">{office.name} Location</h3>
-                <p className="text-muted-foreground mb-6 text-center whitespace-pre-line">
-                  {office.address}
-                </p>
-                <div className="aspect-video bg-muted rounded-lg overflow-hidden">
-                  <iframe
-                    src={office.mapUrl}
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title={`${office.name} Location`}
-                  />
-                </div>
-              </Card>
-            </AnimatedSection>
-          ))}
 
           {/* Spanish Language Note */}
           <AnimatedSection delay={300}>
