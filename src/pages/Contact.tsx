@@ -12,7 +12,8 @@ import AnimatedSection from "@/components/AnimatedSection";
 const Contact = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
-    name: "",
+    firstName: "",
+    lastName: "",
     email: "",
     phone: "",
     message: "",
@@ -24,7 +25,7 @@ const Contact = () => {
       title: "Message Sent!",
       description: "We'll get back to you as soon as possible.",
     });
-    setFormData({ name: "", email: "", phone: "", message: "" });
+    setFormData({ firstName: "", lastName: "", email: "", phone: "", message: "" });
   };
 
   const offices = [
@@ -133,15 +134,28 @@ const Contact = () => {
                   Fill out the form below or use the office information provided for any of our six convenient locations.
                 </p>
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <div>
-                    <Label htmlFor="name">Full Name *</Label>
-                    <Input
-                      id="name"
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      required
-                      className="mt-1"
-                    />
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <Label htmlFor="firstName">First Name *</Label>
+                      <Input
+                        id="firstName"
+                        value={formData.firstName}
+                        onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
+                        required
+                        className="mt-1"
+                      />
+                    </div>
+
+                    <div>
+                      <Label htmlFor="lastName">Last Name *</Label>
+                      <Input
+                        id="lastName"
+                        value={formData.lastName}
+                        onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
+                        required
+                        className="mt-1"
+                      />
+                    </div>
                   </div>
 
                   <div>
@@ -242,16 +256,24 @@ const Contact = () => {
 
                     {/* Map */}
                     <div className="aspect-video lg:aspect-square bg-muted rounded-lg overflow-hidden">
-                      <iframe
-                        src={office.mapUrl}
-                        width="100%"
-                        height="100%"
-                        style={{ border: 0 }}
-                        allowFullScreen
-                        loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade"
-                        title={`${office.name} Location`}
-                      />
+                      <a 
+                        href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(office.address.replace('\n', ', '))}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block h-full cursor-pointer hover:opacity-90 transition-opacity"
+                        title={`Get directions to ${office.name}`}
+                      >
+                        <iframe
+                          src={office.mapUrl}
+                          width="100%"
+                          height="100%"
+                          style={{ border: 0, pointerEvents: 'none' }}
+                          allowFullScreen
+                          loading="lazy"
+                          referrerPolicy="no-referrer-when-downgrade"
+                          title={`${office.name} Location`}
+                        />
+                      </a>
                     </div>
                   </div>
                 </Card>

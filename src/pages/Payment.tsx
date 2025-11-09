@@ -45,17 +45,17 @@ const Payment = () => {
   const pricingExamples = [
     {
       service: "Traditional Metal Braces",
-      price: "$99/month",
+      price: "$149/month",
       totalRange: "$3,500 - $6,500",
     },
     {
       service: "Clear Aligners (Invisalign)",
-      price: "$149/month",
+      price: "$199/month",
       totalRange: "$4,500 - $8,000",
     },
     {
       service: "Ceramic Braces",
-      price: "$129/month",
+      price: "$199/month",
       totalRange: "$4,000 - $7,500",
     },
     {
@@ -211,7 +211,7 @@ const Payment = () => {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button size="lg" variant="outline" asChild className="bg-transparent backdrop-blur-sm border-white/30 text-white hover:bg-white hover:text-primary transition-all duration-300">
-                    <a href="tel:8168803900">Call to Verify Insurance</a>
+                    <a href="tel:+12159461000">Call to Verify Insurance</a>
                   </Button>
                   <Button size="lg" variant="outline" asChild className="bg-transparent backdrop-blur-sm border-white/30 text-white hover:bg-white hover:text-primary transition-all duration-300">
                     <Link to="/contact">Schedule Consultation</Link>
